@@ -33,19 +33,26 @@ h1 {
     text-transform: uppercase;  
 }  
  
-input {  
-    border: 2px solid #ccc;  
-    font-size: 1.5rem;  
-    font-weight: 100;  
-    font-family: 'Lato';  
-    padding: 10px;  
-}  
+input[type=text] {    
+  border: 3px solid;    
+  border-radius: 2px;   
+  display: block;    
+  font-size:1em;    
+  font-weight: bold;    
+  margin: 1em auto;    
+  padding: 1em 4em;   
+ position: relative;
+ 
+   
+     
+}   
 form {  
     margin: 25px auto;  
     padding: 20px;  
     border: 5px solid #ccc;  
     width: 500px;  
-    background: #fff;  
+    background-color:green;  
+
 }  
 div.form-element {  
     margin: 20px 0;  
@@ -105,14 +112,14 @@ function test_input($data) {
 }  
 ?>  
 <h1> Registration Form</h1>  
-<form method="POST" action="nextreg.php">    
-  <b> Enter Name: </b> <input type="text" name="name">  
+<form method="get" action="nextreg.php">    
+  <b> Enter Name: </b> <input type="text" name="fname" placeholder="Enter your name">  
   <span class="error">  <?php echo $nameErr;?> </span>  
   <br> <br>  
- <b> Enter E-mail: </b> <input type="text" name="email"     >  
+ <b> Enter E-mail: </b> <input type="text" name="email" placeholder="Enter your email"    >  
   <span class="error"> <?php echo $emailErr;?> </span>  
   <br> <br>  
- <b> Phone Number: </b> <input type="text" name="contact" >  
+ <b> Phone Number: </b> <input type="text" maxlength=10 name="contact" placeholder="Enter your number" >  
  
   <br> <br>  
  
